@@ -1,0 +1,114 @@
+# SleepingServerStarter settings
+# true to enable, false to disable
+
+# The name of your server.
+# You can specify (https://motd.gg) by using the `§` prefix.
+serverName: "§bPowered by §l§dHexGen§r§b – visit §nwww.hexgen.shop"
+
+# The server name to display in Minecraft, defaults to serverName if not set
+# serverMOTD: "§bPowered by §l§dHexGen§r§b – visit §nwww.hexgen.shop"
+
+# Use Minecraft `server.properties` to overwrite 
+# `serverPort`, `maxPlayers`, `serverOnlineMode`, `useWhitelistFile`, 
+# and `useBlacklistFiles` properties
+#useNativeFiles: false
+
+# The port of your Java Edition server (0 to disable)
+serverPort: 0
+
+# The port of your Bedrock Edition server (0 to disable or add `#`) 
+#bedrockPort: 19132
+
+# Message shown when the server is off and someone is trying to connect
+loginMessage: "...Waking server up, come back in a minute..."
+
+# Like in the server.properties, to check the licence of player or not.
+serverOnlineMode: false
+
+# Use legacy "login" method
+# https://github.com/PrismarineJS/node-minecraft-protocol/issues/1279#issuecomment-1878866611
+#useLegacyLogin: false
+
+# Maximum amount of players
+maxPlayers: 20
+
+# Web page port
+#webPort: 8080
+
+# Stop the web-server when minecraft starts 
+#webStopOnStart: true
+
+# You can specify an absolute path to serve instead or an url to redirect to.
+# true or false to enable, by default it will serve ./plugins/dynmap/web/
+# https://github.com/vincss/mcsleepingserverstarter/wiki/Use-internal-SSS-WebServer-for-dynmap
+#webServeDynmap: false
+
+# Add a button in the web-ui to restart the minecraft server proxy
+#webAllowRestart: false
+
+# Start the Minecraft Server
+startMinecraft: true
+
+# Server start command
+# paper.jar or whatever flavor you like
+minecraftCommand: "java -jar paper.jar --nogui"
+
+# Set a custom Working Directory for the server (path to minecraft server folder)
+# Edit this setting only if you know what you are doing!
+# If you don't know what, don't to edit it.
+#minecraftWorkingDirectory: ""
+
+# Automatically start the real server instead of the sleeping one
+#minecraftAutostart: false
+
+# Customise the delay between when the minecraft server stops 
+# and the sleeping server restarts (to ensure conection are closed)
+# in milliseconds
+restartDelay: 5000
+
+# Prevent the user to stop the server (trought web-server or cli).
+#preventStop: false
+
+# Discord WebHook
+# https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+# Setup a Discord WebHook to your channel
+# discordWebhookUrl: "https://discord.com/api/webhooks/REPLACE_ME"
+# Avatar of the bot in the Discord WebHook
+# discordWebhookName: "SleepingServerStarter"
+# Avatar of the bot in the Discord WebHook
+# discordWebhookAvatar: "https://raw.githubusercontent.com/vincss/mcsleepingserverstarter/master/docs/sleepingserver.png"
+
+# Only allow these player name on the white list to wake the server up
+# example ["vincss"]
+#whiteListedNames: [""]
+
+# Use Minecraft `whitelist.json` instead of the `whiteListedNames` property.
+# Checks both username and UUID
+useWhitelistFile: false
+
+# Prevent connections from those addresses to wake up the server
+# example ["149.102.143.151", "132.145.71.44", "45.128.232.206", "193.35.18."]
+#blackListedAddress: [""]
+
+# Use Minecraft `banned-ips.json` and `banned-players.json` to prevent players from waking up the server.
+# Can be used together with `blackListedAddress` property
+useBlacklistFiles: false
+
+# Use a custom icon 64x64 png 
+# converted using https://www.base64-image.de
+favIcon: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAclBMVEUADSUAEy8AECsAEi0ADigAJFAAFjUANmsAGz8AIUoAMmUALmAAKloCQncDU4oAJ1QDTYQEW5IBPHEBRoIIZJkAYrAHmuQATJQQq+UNeKwBfdAQib0buOYDitsNlM0Ia6EAVqQNf7YCbr0jze8bw+8ZpNByCWJhAAAFH0lEQVRYw42Xi3aqMBBFazEE8n6BRBBE4f9/8U4QvQRQm9VScfXsnBkmCfPzsx7HafzOI5nG9DF8/fN1LMQgPCSHMJaMr/rXtId4zJCPNh6T74gXkInxRX74NJK3gUz6jTqFsXbxxsSuPEOEoCzbIraEaf6VPEfc17U3KEu/Erb6NMtJVztsXO0IyrMVYZWHjR7kTNWeYyEw2FAsj1xsLABgmQCQI+NrQWyndWeJCHFEiBVhZQCCZzq41xpLFq7Y1ZqiPH2ThvAEk+X0knvPiXKcUmMotdpS7nsuFyaiNEQGYHriekGMVoTirmkcpsQqTEVI5oKwsLA0kOZM1B0mSmBGxHivqvsYSNYCrVcy2wkiMpCxrgfDAtzzvmmqS1kNQ88pMxYz27sFYR+QK0+wspRh1zSXc3k+l5eyqRxmFEwQz7MoC5siTnOnqcCSqnaoLudLCT8AqYY2MC3TOo+y8AIcFgCsJO1AXpaX8/l2voRRQjKZtHQPEBVRhhyUj8TjvSnLiXABBlybpqZrwBxDVERPQHuGB3AJ4kuQl01/vc2A7BBbiKv4BbgVMGkJ3iETZTMKbAHAmdgHHHYcFEXRDlMcVeUtBgDbAJIJ8LvjgLS367UobuNQlk2tDDbYFhNArADHOAUTgAKgLgKgOPmmgqWECZ4AZh+QLBfSE3ArbkVxPZ1umoAafh8AtQQ8kvAGADm4gv5UCEJBDoX9V4BWAKD9Q34NAMIoFPIMUHuAaCsBAA8AENtTcQ0AGmKwhdwHxLv5A4CkPt8mC6dCUUogiafC7gCSB+AQh8AsQ8zezjewcL0JWETYXK9YImYkAJab6+8acMhy5SQxVEqqzxAGhADb2rUApqSYIm3yeHde5QCSQDvBYE4QGHiSIQReXAlC8J1kSsvsCyBDVDgDsxGwrKAWRIg+TM8Q1uF8OGwBcQwIGS2YJMEEuUIyw/SESGYFjg+HXUA4U2BqbSQLJiTnYXrCJBbwKd8eUFtAICAsFA0mJEKSESqpVWAk3xpYL6YXQXLxMCGhEqU5GTnp/wgAgkRUgQkoQrjALo2k3AX8rAHpEwChmxOXUjJ+giKSTwfpZ8BTDwKQUHsyQGGPO7RBJOstLctmeRhBIbHl5HU3DUA849hsqhklQUOJ4ZxjakIG4XCGO4Onq4GshqLIF0thCUB1LRFvdHeHMdqxxbgdeT/AXa0auFZqHDFyFU5jwBxDisaRSXV3/b323hF39/3g9H303msR/nR2uPesG0z6/ykutuUUtY339d35e937sKsMgyduELwDwND2XvCmGXTXPBw8dvXl0YTgQK2qQXv4MyokxdAo5hqlxqFVcNRXnan6uuorki4MLAB53RKiKt1VgkPycduWNRGwr/O2VlUHicWlx21VkkMMeKYx63tYiqVwVdm2PfElt2Vn2vLSVr2F7y41bzvEy5Il8fvB00LKbZYxDe+WXddprKEOraZGO+cUCVdNBM9zrrJk+XoQv6KkcyU9yyka+bQe0+2b4hMAWskonCRQTFAzWIYzDQ6V8HHanOcFvgU8CKlwQjgtlOmEU5orqYXW4TvVUaWFEFZw+J8Qwuqlf84jLF7MQ+HChcMmlnFuoYCxMhxhY3h464SDmgNg3TTM1ZTMPUY6NxqwOF93i94j2X3b/v3S7Bw+va2/aXg+6o877eLfCG+6prlp+4M8edO3Pdu+P01//Ng5fmkbPzTAx1fn+7Fx/dRAH/+3vzEm+UvvHHXvyXq8ad//AYkGdciOD4BmAAAAAElFTkSuQmCC
+
+
+# Path to a PNG file to use as the server icon.
+# If this is set to server-icon.png then it will use the same icon as the server.
+# favIconPath: sss.ico
+
+# Force compatibility with a specific minecraft version.
+# If set to false, it should handle any compatible version.
+# version: false
+
+# Hide the ip from the remote player in the logs
+#hideIpInLogs: true
+
+# Hide pinging logs
+#hideOnConnectionLogs: true
